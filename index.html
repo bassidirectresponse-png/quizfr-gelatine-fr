@@ -17,6 +17,17 @@
     <meta name="twitter:description" content="Découvrez comment perdre jusqu'à 12kg en 30 jours avec la recette Gélatine Mounjaro.">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
+    <!-- SPA redirect for GitHub Pages -->
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
     <!-- Preload critical hero images -->
     <link rel="preload" as="image" href="https://i.imgur.com/DD0hphP.png" />
     <link rel="preload" as="image" href="https://i.imgur.com/5q6uOMk.png" />

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script>
+      var segments = window.location.pathname.split('/');
+      var path = segments.join('/');
+      sessionStorage.redirect = window.location.href;
+      window.location.replace(
+        window.location.protocol + '//' + window.location.hostname +
+        (window.location.port ? ':' + window.location.port : '') +
+        '/?p=' + encodeURIComponent(path) +
+        (window.location.search ? '&q=' + encodeURIComponent(window.location.search.slice(1)) : '') +
+        window.location.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
